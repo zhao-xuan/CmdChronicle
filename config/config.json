@@ -1,0 +1,67 @@
+{
+  "metadata": {
+    "last_updated": "2024-01-01T00:00:00",
+    "version": "1.0.0"
+  },
+  "config": {
+    "version": "1.0.0",
+    "ollama": {
+      "base_url": "http://localhost:11434",
+      "default_model": "llama3.2",
+      "timeout": 30,
+      "max_tokens": 2000,
+      "temperature": 0.7,
+      "top_p": 0.9
+    },
+    "collection": {
+      "default_shell": "auto",
+      "max_commands": 1000,
+      "include_active_processes": true,
+      "ignore_patterns": [
+        "^history$",
+        "^clear$",
+        "^exit$",
+        "^logout$",
+        "^cd$",
+        "^ls$",
+        "^pwd$",
+        "^echo$"
+      ]
+    },
+    "analysis": {
+      "automation_threshold": 0.3,
+      "complexity_weight": 0.2,
+      "frequency_weight": 0.3,
+      "pattern_weight": 0.5
+    },
+    "visualization": {
+      "wordcloud": {
+        "width": 1200,
+        "height": 800,
+        "max_words": 100,
+        "colormap": "viridis"
+      },
+      "charts": {
+        "dpi": 300,
+        "style": "seaborn-v0_8",
+        "figure_size": [12, 8]
+      }
+    },
+    "output": {
+      "default_output_dir": "reports",
+      "save_intermediate": true,
+      "export_formats": ["html", "png", "json"]
+    },
+    "ui": {
+      "theme": "default",
+      "show_progress": true,
+      "verbose_output": false,
+      "color_output": true
+    },
+    "data": {
+      "auto_cleanup_days": 30,
+      "max_file_size_mb": 100,
+      "compression_enabled": false
+    }
+  }
+} 
